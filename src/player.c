@@ -41,7 +41,7 @@ void updatePlayer()
 
     player.x += player.xDirection * player.speed;
     player.y += player.yDirection * player.speed;
-    scroll_sprite(0, player.xDirection, player.yDirection);
+    scroll_sprite(0, player.xDirection * player.speed, player.yDirection * player.speed);
 
     if (player.x % 8 == 0 && player.y % 8 == 0) 
     {
