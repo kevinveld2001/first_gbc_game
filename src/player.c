@@ -3,6 +3,7 @@
 #include "player.h"
 void getPlayerInput();
 BOOLEAN checkPlayerCollision(int x, int y);
+void screenShake(int times);
 
 struct Player {
     int animation;
@@ -94,6 +95,7 @@ void getPlayerInput()
         if (playerMap.map[cuttingXPosition + cuttingYPosition * playerMap.width] == 2) {
             playerMap.map[cuttingXPosition + cuttingYPosition * playerMap.width] = 5;
 
+            screenShake(5);
             VBK_REG = 1;
             set_bkg_tile_xy(cuttingXPosition, cuttingYPosition, 0);
             VBK_REG = 0;
@@ -122,4 +124,16 @@ BOOLEAN checkPlayerCollision(int x, int y)
     int tile = playerMap.map[(x/8) + (y/8) * playerMap.width];
     for (int i = 0; i < walkebleTilesCount; i++) if (tile == playerMap.walkebleTiles[i] ) return FALSE;
     return TRUE;
+}
+
+void screenShake(int times) {
+    for (int i = 0; i < times; i++) {
+        wait_vbl_done();
+        scroll_bkg(1, 0);
+        delay(20);
+        scroll_bkg(-2, 0);
+        delay(20);
+        scroll_bkg(1, 0);
+        delay(20);
+    }
 }
