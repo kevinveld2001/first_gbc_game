@@ -10,7 +10,7 @@
   Compression          : None.
   Counter              : None.
   Tile size            : 8 x 8
-  Tiles                : 0 to 2
+  Tiles                : 0 to 5
 
   Palette colors       : Included.
   SGB Palette          : None.
@@ -52,7 +52,7 @@
 
 /* Gameboy Color palette 0 */
 #define backgroundTilesCGBPal0c0 32767
-#define backgroundTilesCGBPal0c1 8935
+#define backgroundTilesCGBPal0c1 796
 #define backgroundTilesCGBPal0c2 538
 #define backgroundTilesCGBPal0c3 2
 
@@ -63,10 +63,10 @@
 #define backgroundTilesCGBPal1c3 33
 
 /* Gameboy Color palette 2 */
-#define backgroundTilesCGBPal2c0 6076
-#define backgroundTilesCGBPal2c1 8935
-#define backgroundTilesCGBPal2c2 6596
-#define backgroundTilesCGBPal2c3 5344
+#define backgroundTilesCGBPal2c0 31704
+#define backgroundTilesCGBPal2c1 31723
+#define backgroundTilesCGBPal2c2 30240
+#define backgroundTilesCGBPal2c3 19616
 
 /* Gameboy Color palette 3 */
 #define backgroundTilesCGBPal3c0 6076

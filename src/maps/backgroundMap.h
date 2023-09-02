@@ -7,7 +7,7 @@
  Info:
    Section       : 
    Bank          : 0
-   Map size      : 32 x 32
+   Map size      : 20 x 18
    Tile set      : C:\Users\kveld\Documents\code\game\gb\test\src\sprite\backgroundTiles.gbr
    Plane count   : 2 planes (16 bits)
    Plane order   : Planes are continues
@@ -18,8 +18,8 @@
 
 */
 
-#define backgroundMapWidth 32
-#define backgroundMapHeight 32
+#define backgroundMapWidth 20
+#define backgroundMapHeight 18
 #define backgroundMapBank 0
 
 #define backgroundMap backgroundMapPLN0

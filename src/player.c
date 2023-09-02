@@ -57,12 +57,18 @@ void updatePlayer()
 void getPlayerInput() 
 {
     uint8_t btn = joypad();
+    BOOLEAN isCutting = FALSE;
     if (btn & J_A)
     {
         btn = btn ^ J_A;
         player.speed = 2;
     } else {
         player.speed = 1;
+    }
+    if (btn & J_B)
+    {
+        btn = btn ^ J_B;
+        isCutting = TRUE;
     }
 
     switch (btn)
@@ -81,6 +87,18 @@ void getPlayerInput()
         break;
     default:
         break;
+    }
+    if (isCutting) {
+        int cuttingXPosition = (player.x + player.xDirection * 8) / 8;
+        int cuttingYPosition = (player.y + player.yDirection * 8) / 8;
+        if (playerMap.map[cuttingXPosition + cuttingYPosition * playerMap.width] == 2) {
+            playerMap.map[cuttingXPosition + cuttingYPosition * playerMap.width] = 5;
+
+            VBK_REG = 1;
+            set_bkg_tile_xy(cuttingXPosition, cuttingYPosition, 0);
+            VBK_REG = 0;
+            set_bkg_tile_xy(cuttingXPosition, cuttingYPosition, 5);
+        }
     }
 
     if (checkPlayerCollision(player.x + player.xDirection * 8, player.y + player.yDirection * 8)) 
@@ -102,6 +120,6 @@ BOOLEAN checkPlayerCollision(int x, int y)
 {
     if (x < 0 || x > playerMap.width * 8 - 8 || y < 0 || y > playerMap.height * 8 - 8) return TRUE;
     int tile = playerMap.map[(x/8) + (y/8) * playerMap.width];
-    for (int i = 0; i < walkebleTilesCount; i++) if (tile != playerMap.walkebleTiles[i] && tile != 0) return TRUE;
-    return FALSE;
+    for (int i = 0; i < walkebleTilesCount; i++) if (tile == playerMap.walkebleTiles[i] ) return FALSE;
+    return TRUE;
 }
