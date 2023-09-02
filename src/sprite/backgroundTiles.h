@@ -10,11 +10,11 @@
   Compression          : None.
   Counter              : None.
   Tile size            : 8 x 8
-  Tiles                : 0 to 1
+  Tiles                : 0 to 2
 
-  Palette colors       : None.
+  Palette colors       : Included.
   SGB Palette          : None.
-  CGB Palette          : None.
+  CGB Palette          : 1 Byte per entry.
 
   Convert to metatiles : No.
 
@@ -25,6 +25,80 @@
 
 /* Bank of tiles. */
 #define backgroundTilesBank 0
+
+/* Super Gameboy palette 0 */
+#define backgroundTilesSGBPal0c0 6076
+#define backgroundTilesSGBPal0c1 8935
+#define backgroundTilesSGBPal0c2 6596
+#define backgroundTilesSGBPal0c3 5344
+
+/* Super Gameboy palette 1 */
+#define backgroundTilesSGBPal1c0 6076
+#define backgroundTilesSGBPal1c1 8935
+#define backgroundTilesSGBPal1c2 6596
+#define backgroundTilesSGBPal1c3 5344
+
+/* Super Gameboy palette 2 */
+#define backgroundTilesSGBPal2c0 6076
+#define backgroundTilesSGBPal2c1 8935
+#define backgroundTilesSGBPal2c2 6596
+#define backgroundTilesSGBPal2c3 5344
+
+/* Super Gameboy palette 3 */
+#define backgroundTilesSGBPal3c0 6076
+#define backgroundTilesSGBPal3c1 8935
+#define backgroundTilesSGBPal3c2 6596
+#define backgroundTilesSGBPal3c3 5344
+
+/* Gameboy Color palette 0 */
+#define backgroundTilesCGBPal0c0 32767
+#define backgroundTilesCGBPal0c1 8935
+#define backgroundTilesCGBPal0c2 538
+#define backgroundTilesCGBPal0c3 2
+
+/* Gameboy Color palette 1 */
+#define backgroundTilesCGBPal1c0 30687
+#define backgroundTilesCGBPal1c1 8935
+#define backgroundTilesCGBPal1c2 6596
+#define backgroundTilesCGBPal1c3 33
+
+/* Gameboy Color palette 2 */
+#define backgroundTilesCGBPal2c0 6076
+#define backgroundTilesCGBPal2c1 8935
+#define backgroundTilesCGBPal2c2 6596
+#define backgroundTilesCGBPal2c3 5344
+
+/* Gameboy Color palette 3 */
+#define backgroundTilesCGBPal3c0 6076
+#define backgroundTilesCGBPal3c1 8935
+#define backgroundTilesCGBPal3c2 6596
+#define backgroundTilesCGBPal3c3 5344
+
+/* Gameboy Color palette 4 */
+#define backgroundTilesCGBPal4c0 6076
+#define backgroundTilesCGBPal4c1 8935
+#define backgroundTilesCGBPal4c2 6596
+#define backgroundTilesCGBPal4c3 5344
+
+/* Gameboy Color palette 5 */
+#define backgroundTilesCGBPal5c0 6076
+#define backgroundTilesCGBPal5c1 8935
+#define backgroundTilesCGBPal5c2 6596
+#define backgroundTilesCGBPal5c3 5344
+
+/* Gameboy Color palette 6 */
+#define backgroundTilesCGBPal6c0 6076
+#define backgroundTilesCGBPal6c1 8935
+#define backgroundTilesCGBPal6c2 6596
+#define backgroundTilesCGBPal6c3 5344
+
+/* Gameboy Color palette 7 */
+#define backgroundTilesCGBPal7c0 6076
+#define backgroundTilesCGBPal7c1 8935
+#define backgroundTilesCGBPal7c2 6596
+#define backgroundTilesCGBPal7c3 5344
+/* CGBpalette entries. */
+extern unsigned char backgroundTilesCGB[];
 /* Start of tile array. */
 extern unsigned char backgroundTiles[];
 

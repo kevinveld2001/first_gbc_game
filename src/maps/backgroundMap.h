@@ -7,10 +7,10 @@
  Info:
    Section       : 
    Bank          : 0
-   Map size      : 20 x 18
-   Tile set      : C:\Users\kveld\Documents\code\game\gb\test\sprite\background.gbr
-   Plane count   : 1 plane (8 bits)
-   Plane order   : Tiles are continues
+   Map size      : 32 x 32
+   Tile set      : C:\Users\kveld\Documents\code\game\gb\test\src\sprite\backgroundTiles.gbr
+   Plane count   : 2 planes (16 bits)
+   Plane order   : Planes are continues
    Tile offset   : 0
    Split data    : No
 
@@ -18,10 +18,12 @@
 
 */
 
-#define backgroundMapWidth 20
-#define backgroundMapHeight 18
+#define backgroundMapWidth 32
+#define backgroundMapHeight 32
 #define backgroundMapBank 0
 
-extern unsigned char backgroundMap[];
+#define backgroundMap backgroundMapPLN0
+extern unsigned char backgroundMapPLN0[];
+extern unsigned char backgroundMapPLN1[];
 
 /* End of BACKGROUNDMAP.H */
