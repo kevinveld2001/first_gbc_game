@@ -2,3 +2,7 @@
 out/*
 *.gbr
 *.gbm
+*.cdb
+*.ihx
+*.map
+*.noi
